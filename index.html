@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>UNIAJC - Selección de Rol</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Selecciona tu Rol</h1>
+
+    <select id="rol" class="input">
+        <option value="estudiante.html">Estudiante</option>
+        <option value="director.html">Director</option>
+        <option value="jurado.html">Jurado</option>
+        <option value="coordinacion.html">Coordinación</option>
+    </select>
+
+    <button onclick="ingresar()">Ingresar</button>
+</div>
+
+<script>
+    function ingresar() {
+        const destino = document.getElementById("rol").value;
+        window.location.href = "views/" + destino;
+    }
+</script>
+
+</body>
+</html>

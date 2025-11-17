@@ -1,0 +1,27 @@
+
+import { proyectoModel } from "../models/proyectoModel.js";
+
+const form = document.getElementById("formRegistro");
+const msg = document.getElementById("msg");
+const btnBack = document.getElementById("btn-back");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const titulo = document.getElementById("titulo").value.trim();
+  const resumen = document.getElementById("resumen").value.trim();
+  const estudiante = document.getElementById("estudiante").value.trim();
+  const programa = document.getElementById("programa").value.trim();
+
+  if(!titulo || !estudiante) { showMsg("Complete los campos requeridos"); return; }
+
+  const proyecto = ProyectoModel.create({ titulo, resumen, estudiante, programa });
+  showMsg("Proyecto registrado con éxito. ID: " + proyecto.id);
+  setTimeout(()=> window.location.href = "estudiante.html", 1000);
+});
+
+btnBack.addEventListener("click", ()=> window.location.href = "index.html");
+
+function showMsg(text) {
+  msg.classList.remove("hidden");
+  msg.textContent = text;
+}

@@ -1,0 +1,31 @@
+<!-- views/registro_proyecto.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Registrar Proyecto - UNIAJC</title>
+  <link rel="stylesheet" href="../css/registro_proyecto.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Registrar Proyecto de Grado</h1>
+    <form id="formRegistro">
+      <label>Título</label>
+      <input id="titulo" required />
+      <label>Resumen</label>
+      <textarea id="resumen" rows="4" required></textarea>
+      <label>Estudiante (nombre - código)</label>
+      <input id="estudiante" required />
+      <label>Programa</label>
+      <input id="programa" required />
+      <div class="actions">
+        <button type="submit">Registrar</button>
+        <button type="button" id="btn-back">Cancelar</button>
+      </div>
+    </form>
+    <div id="msg" class="hidden"></div>
+  </main>
+  <script type="module" src="../js/registroController.js"></script>
+</body>
+</html>
+
