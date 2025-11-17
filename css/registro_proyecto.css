@@ -1,27 +1,8 @@
-
-import { proyectoModel } from "../models/proyectoModel.js";
-
-const form = document.getElementById("formRegistro");
-const msg = document.getElementById("msg");
-const btnBack = document.getElementById("btn-back");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const titulo = document.getElementById("titulo").value.trim();
-  const resumen = document.getElementById("resumen").value.trim();
-  const estudiante = document.getElementById("estudiante").value.trim();
-  const programa = document.getElementById("programa").value.trim();
-
-  if(!titulo || !estudiante) { showMsg("Complete los campos requeridos"); return; }
-
-  const proyecto = ProyectoModel.create({ titulo, resumen, estudiante, programa });
-  showMsg("Proyecto registrado con éxito. ID: " + proyecto.id);
-  setTimeout(()=> window.location.href = "estudiante.html", 1000);
-});
-
-btnBack.addEventListener("click", ()=> window.location.href = "index.html");
-
-function showMsg(text) {
-  msg.classList.remove("hidden");
-  msg.textContent = text;
-}
+/* css/registro_proyecto.css */
+.container { max-width:700px;margin:40px auto;background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+label{display:block;margin-top:10px;font-weight:600}
+input, textarea { width:100%;padding:8px;border:1px solid #ddd;border-radius:6px }
+.actions{display:flex;gap:10px;margin-top:14px}
+button{padding:10px 14px;border-radius:8px;border:none;background:#0b6bd1;color:#fff;cursor:pointer}
+#msg.hidden{display:none}
+#msg{margin-top:12px;padding:10px;border-radius:6px;background:#eef6ff;color:#084b7a}
