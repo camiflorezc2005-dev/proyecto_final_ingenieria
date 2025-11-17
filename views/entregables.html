@@ -1,0 +1,30 @@
+<!-- views/entregables.html -->
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Entregables - UNIAJC</title>
+  <link rel="stylesheet" href="../css/entregables.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Entregables</h1>
+
+    <label>Seleccionar proyecto</label>
+    <select id="selectProyecto"></select>
+
+    <label>Fase (Ej: Anteproyecto, Final)</label>
+    <input id="fase" placeholder="Anteproyecto" />
+
+    <label>Archivo (simulado)</label>
+    <input id="nombreArchivo" placeholder="nombre_documento.pdf" />
+
+    <button id="btnSubir">Subir entregable</button>
+
+    <h3>Entregables del proyecto</h3>
+    <ul id="listaEntregables"></ul>
+  </main>
+
+  <script type="module" src="../js/entregablesController.js"></script>
+</body>
+</html>
