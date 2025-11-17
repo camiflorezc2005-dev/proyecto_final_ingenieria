@@ -1,0 +1,4 @@
+/* css/estudiante.css */
+.container{max-width:900px;margin:36px auto;padding:18px;background:#fff;border-radius:8px}
+li{padding:12px;border-bottom:1px solid #eee;display:flex;justify-content:space-between;align-items:center}
+.pill{background:#eef6ff;color:#084b7a;padding:6px 8px;border-radius:999px;font-weight:600}
